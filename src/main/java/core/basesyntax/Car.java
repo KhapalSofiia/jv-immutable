@@ -37,7 +37,7 @@ public final class Car {
         return cloneList(wheels);
     }
 
-    public Car changeEngine (Engine newEngine) {
+    public Car changeEngine(Engine newEngine) {
         if (newEngine == null) {
             throw new NullPointerException();
         }
@@ -90,8 +90,8 @@ public final class Car {
 
         if (other instanceof Car) {
             Car current = (Car) other;
-            return Objects.equals(current.engine, engine) && Objects.equals(current.color, color) &&
-                    Objects.equals(current.wheels, wheels) && Objects.equals(current.year, year);
+            return Objects.equals(current.engine, engine) && Objects.equals(current.color, color)
+                    && Objects.equals(current.wheels, wheels) && Objects.equals(current.year, year);
         }
         return false;
     }
