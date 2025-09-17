@@ -22,7 +22,7 @@ public final class Car {
     }
 
     public Engine getEngine() {
-        return engine.clone();
+        return engine == null ? null : engine.clone();
     }
 
     public int getYear() {
@@ -70,7 +70,7 @@ public final class Car {
         return list;
     }
 
-    public int hashCode(Car other) {
+    public int hashCode() {
         int result = 17;
         result = 31 * result + year;
         result = 31 * result + (color == null ? 0 : color.hashCode());
